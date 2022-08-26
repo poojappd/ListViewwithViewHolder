@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_alignStart="@+id/textViewName"
+            android:layout_alignLeft="@+id/textViewName"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textViewNationality"
+            android:layout_alignLeft="@+id/textViewNationality"
+            android:layout_alignEnd="@+id/textViewNationality"
+            android:layout_alignRight="@+id/textViewNationality"
+            android:layout_alignBottom="@+id/textViewLastName"
+            android:gravity="right"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textViewNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:text="TextView"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/InputText"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="142dp"
+            android:ems="10"
+            android:hint="enter text"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
