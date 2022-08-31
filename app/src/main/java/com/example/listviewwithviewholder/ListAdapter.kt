@@ -11,7 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter(val context: Context, val people:MutableList<Person>) :BaseAdapter() {
+class ListAdapter(private val context: Context, val people:MutableList<Person>) :BaseAdapter() {
 
     val inputTextMap = mutableMapOf<Int, String>()
     val layoutInflater = LayoutInflater.from(context)
@@ -43,7 +43,7 @@ class ListAdapter(val context: Context, val people:MutableList<Person>) :BaseAda
             personViewHolder = view1.tag as PersonViewHolder
         }
 
-        val person = people?.get(index)
+        val person = people.get(index)
 
         personViewHolder.textViewName.setText(person?.name)
         personViewHolder.textViewLastName.setText(person?.lastName)

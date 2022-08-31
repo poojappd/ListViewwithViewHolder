@@ -10,13 +10,24 @@ import android.widget.ListView
 class MainActivity : AppCompatActivity() {
     lateinit var  appUtility:AppUtility
     lateinit var listAdapter: ListAdapter
+    lateinit var slowListAdapter:ListAdapterSlowWay
+    lateinit var rightListAdapter: ListAdapterRightWay
+    lateinit var alternateAdapter: ListAdapterWithoutViewHolderAlternative
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appUtility = AppUtility(this)
+
         val listView = findViewById<ListView>(R.id.lv)
+        slowListAdapter = ListAdapterSlowWay(this, appUtility.people)
+        rightListAdapter = ListAdapterRightWay(this, appUtility.people)
+        alternateAdapter = ListAdapterWithoutViewHolderAlternative(this, appUtility.people)
+
         listAdapter = ListAdapter(this, appUtility.people)
-        listView.adapter = listAdapter
+
+        //adapter swap here
+        listView.adapter = alternateAdapter
     }
 
     fun buttonOnClick(view: View){
